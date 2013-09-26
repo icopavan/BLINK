@@ -1,4 +1,4 @@
-BLINK
+BLINK - central code repo
 =====
 
 Set of matlab scripts for signal processing and classification.
