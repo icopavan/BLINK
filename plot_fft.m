@@ -13,12 +13,36 @@ function [] = plot_fft(signal,Fs)
     %values)
     axis_values=[-Fs/2:Fs/2-1];
     
+    %============================FIRST PLOT======================
     %choose subplot
     subplot(2,1,1);
     
     %plot initial signal
-    plot(1:[length(signal)],signal,'b','LineWidth',1.5);
+    plot([1/Fs:1/Fs:length(signal)/Fs],signal,'b','LineWidth',1.5);
     
+    %enable tickmarks
+    grid on;
+    grid minor;
+    
+    %label graph and axes
+    title('Raw input signal');
+    xlabel('Time [s]');
+    ylabel('Amplitude [-]');
+    
+    %define range of axes
+    minim=0;
+    if(min(signal)<0)
+        minim=min(signal)*1.05;
+    else
+        minim=min(signal)*0.95;
+    end
+        
+    axis([0,length(signal)/Fs,minim,max(signal)*1.05]);
+    
+    %set tick marks on x-axis
+    %set(gca,'XTick',[-1000:10:1000])
+    
+    %============================SECOND PLOT======================
     %choose subplot
     subplot(2,1,2);
     
