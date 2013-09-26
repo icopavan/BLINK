@@ -1,5 +1,5 @@
-function [] = FFT_plot_edo(signal,Fs)
-%FFT_plot_edo Compute and plot the FFT given a signal and its sampling
+function [] = plot_fft(signal,Fs)
+%plot_fft Compute and plot the FFT given a signal and its sampling
 %frequency.
     signal2=fft(signal);
     signal2=ifftshift(abs(signal2));
