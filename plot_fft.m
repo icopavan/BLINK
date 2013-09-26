@@ -1,6 +1,7 @@
 function [] = plot_fft(signal,Fs)
-%plot_fft computes and plots the FFT of a given signal (signal), knowing its sampling rate (Fs).
-%   Simple function displaying the FFT of the input signal.
+%plot_fft computes and plots the FFT of a given signal (signal), knowing
+%its sampling rate (Fs). Also plots the original signal for inspection.
+%   Simple function displaying the FFT of the input signal as well as the signal itself.
    
     %performs the fast fourier transform
     signal2=abs(fft(signal,Fs));
@@ -11,7 +12,16 @@ function [] = plot_fft(signal,Fs)
     %defines the x-axis values corresponding to the fft (the frequency
     %values)
     axis_values=[-Fs/2:Fs/2-1];
-
+    
+    %choose subplot
+    subplot(2,1,1);
+    
+    %plot initial signal
+    plot(1:[length(signal)],signal,'b','LineWidth',1.5);
+    
+    %choose subplot
+    subplot(2,1,2);
+    
     %plots fft
     plot(axis_values,signal2,'r','LineWidth',1.5);
     
