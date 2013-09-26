@@ -1,6 +1,5 @@
 function [] = plot_fft(signal,Fs)
-%plot_fft computes and plots the FFT of a given signal, knowing its sampling rate
-%frequency.
+%plot_fft computes and plots the FFT of a given signal, knowing its sampling rate.
     signal2=fft(signal);
     signal2=ifftshift(abs(signal2));
     a=-1*(Fs/2)+Fs/length(signal);
