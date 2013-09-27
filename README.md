@@ -8,7 +8,7 @@ These functions are used to treat an arbitrary recorded signal to extract inform
 
 ### Authors
 
-Code and scripts by E - doardo D'Anna and Charles Vila.
+Code and scripts by E ded- doardo D'Anna and Charles Vila.
 
 ### Functions
 - **plot_fft.m**: a simple (but useful) function which allows any sampled signal to be fft'd and ploted.
