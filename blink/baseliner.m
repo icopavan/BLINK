@@ -1,5 +1,5 @@
 function [ signal1 signal2 ] = baseliner( signal1, signal2, interval ,draw)
-%BASELINER adjusts the amplitudes of the two signals to the same baseline
+%BASELINER adjustssss the amplitudes of the two signals to the same baseline
 %   interval goes from 1-interval
 sum1=0;
 sum2=0;
