@@ -1,7 +1,7 @@
 function [ signal1 signal2 ] = simusignal( length , draw )
 %SIMUSIGNAL Summary of this function goes here
 %min length is 500
-%   length - of the signals
+%   this function takes length as a parameter to generate two signals
 %   with noise and one activity peak randomly placed
 %   Draw is a bool that defines if the signals are plotted.
 
