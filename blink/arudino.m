@@ -1,26 +1,3 @@
-%%
-% Read the values returned by an ARDUINO
-% example of ARDUINO code :
-% void setup()
-% {
-%   Serial.begin(115200);
-% }
-%
-% void loop()
-% {
-%   int firstValue=1;
-%   int secondValue=2;
-%
-%   Serial.println(firstValue);
-%   delay(2); //between 2 values it may be needed to wait
-%   Serial.println(secondValue);
-%
-%   delay(40); //TO BE TESTED, SOMETIMES MATLAB IS TOO SLOW TO EMPTY THE
-%   //BUFFER IN TIME, THUS IT DOESN'T STAY IN REAL-TIME...
-%
-% }
-
-
 %the following lines verify that the port was closed, which is not the case
 %if an error occured
 
@@ -49,7 +26,7 @@ try
     
     
     %change here the number of value corresponding to 1 trial:
-    nbIn1Trial=3;%2 for the previous example
+    nbIn1Trial=1;%1 for the previous example
     
     array=zeros(1,nbIn1Trial);
     
