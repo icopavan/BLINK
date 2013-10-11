@@ -14,7 +14,7 @@ try
     % /!\ MODIFY HERE THE PATH OF THE SERIAL PORT  /!\
     % example of ports: COM6 (windows) or /dev/tty.usbmodemfd111(macos)
     %s = serial('/dev/cu.usbmodemfa131');
-    s = serial('/dev/cu.usbmodemfd121');
+    s = serial('/dev/tty.usbmodem1411');
     set(s,'BaudRate',115200);
     fopen(s);
     
@@ -38,7 +38,7 @@ try
             while s.BytesAvailable<=0
             end
             temp = fscanf(s,'%f');
-            array(i)=temp
+            array(i)=temp;
         end
         
         %from here, all the values for 1 trial are stored into the variable
@@ -47,7 +47,7 @@ try
         allData=[allData;array];
         
         %insert the plot commands here
-        plot(allData(:,1)/100,allData(:,2)/10000);
+        plot(allData(:,1)/100);
         
         hold on
         %for real-time:
